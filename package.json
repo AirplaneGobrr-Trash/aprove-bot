@@ -1,0 +1,25 @@
+{
+  "name": "aprove-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AirplaneGobrr-Trash/aprove-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AirplaneGobrr-Trash/aprove-bot/issues"
+  },
+  "homepage": "https://github.com/AirplaneGobrr-Trash/aprove-bot#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "discord.js-search": "^1.0.1",
+    "pteroly": "^1.9.5"
+  },
+  "description": ""
+}

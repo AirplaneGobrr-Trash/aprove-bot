@@ -1,0 +1,5 @@
+{
+    "url": "PanelURL",
+    "auth": "ptlc_UserAuthFromPanel",
+    "token": "botToken"
+}
