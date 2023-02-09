@@ -60,9 +60,9 @@ client.on(Events.MessageReactionAdd, async (msgReact, usr) => {
                 })
 
                 if (!fail && role && channel && user) {
-                    msgReact.message.channel.send("All good!")
+                    msgReact.message.reply("All good!")
                 } else {
-                    msgReact.message.channel.send(`Something went wrong! Whitelist or DM: ${fail}\nRole: ${!!role}\nChannel: ${!!channel}\nUser: ${!!user}`)
+                    msgReact.message.reply(`Something went wrong! Whitelist or DM: ${fail}\nRole: ${!!role}\nChannel: ${!!channel}\nUser: ${!!user}`)
                 }
                 break
             }
