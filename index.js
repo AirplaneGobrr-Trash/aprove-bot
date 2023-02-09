@@ -56,7 +56,7 @@ client.on(Events.MessageReactionAdd, async (msgReact, usr) => {
                 break
             }
             case "❌": {
-                user.send("Tyvärr så kom du inte in...")
+                if (user) user.send("Tyvärr så kom du inte in...")
                 break
             }
         }
