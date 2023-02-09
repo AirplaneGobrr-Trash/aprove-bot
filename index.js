@@ -43,13 +43,15 @@ client.on(Events.MessageReactionAdd, async (msgReact, usr) => {
         
         switch (msgReact.emoji.name) {
             case "✅": {
-                user.send("Välkommen till Montoria...")
+                if (user) await user.send("Välkommen till Montoria...").catch((e)=>{
+                    console.log(e)
+                })
 
                 var role = msgReact.message.guild.roles.cache.get(role_id)
-                user.roles.add(role)
+                if (role && user) user.roles.add(role)
 
                 var channel = msgReact.message.guild.channels.cache.get(update_channel)
-                channel.send(`Välkommen <@${user.id}> till Montoria SMP!!!`)
+                if (channel && user) channel.send(`Välkommen <@${user.id}> till Montoria SMP!!!`)
                 pteroly.Client.sendCommand(config.pteroID, `whitelist add ${mcName}`)
                 break
             }
