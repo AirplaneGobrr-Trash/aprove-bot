@@ -1,5 +1,9 @@
 {
     "url": "PanelURL",
     "auth": "ptlc_UserAuthFromPanel",
-    "token": "botToken"
+    "token": "botToken",
+    "webhookChannel": "1003339397107830894",
+    "roleID": "1001043585099112448",
+    "updateChannel": "1001035225180147783",
+    "pteroID": "server ID from URL"
 }

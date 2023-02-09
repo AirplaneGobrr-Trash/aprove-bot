@@ -18,9 +18,9 @@ const client = new Client({
     ]
 });
 
-var webhook_channel = "1003339397107830894" // 1003339397107830894
-var role_id = "1001043585099112448" // 1001043585099112448
-var update_channel = "1001035225180147783" // 1001035225180147783
+var webhook_channel = config.webhookChannel // 1003339397107830894
+var role_id = config.roleID // 1001043585099112448
+var update_channel = config.updateChannel // 1001035225180147783
 
 // console.log(Events, GatewayIntentBits)
 
@@ -34,7 +34,7 @@ client.on(Events.MessageCreate, async (msg) => {
 client.on(Events.MessageReactionAdd, async (msgReact, usr) => {
     console.log(msgReact, usr, msgReact.message)
     if (msgReact.count == 2) {
-        var embed = msgReact.message.embeds[0].fields
+        var embed = msgReact.message.embeds[0].data.fields
         console.log(embed)
         // var user = usr // read the msg and get the embed and get the user
         var user = await search.searchMember(msgReact.message, embed[0].value)
@@ -50,7 +50,7 @@ client.on(Events.MessageReactionAdd, async (msgReact, usr) => {
 
                 var channel = msgReact.message.guild.channels.cache.get(update_channel)
                 channel.send(`Välkommen <@${user.id}> till Montoria SMP!!!`)
-                pteroly.Client.sendCommand("700575f4", `whitelist add ${mcName}`)
+                pteroly.Client.sendCommand(config.pteroID, `whitelist add ${mcName}`)
                 break
             }
             case "❌": {
